@@ -1,0 +1,21 @@
+# CLion
+.idea/
+cmake-build-*/
+
+# Build
+build/
+*.o
+*.a
+*.so
+
+# Compiled binary
+scaling
+
+# Images (input/output)
+*.bmp
+*.png
+*.jpg
+*.jpeg
+
+.DS_Store
+*~

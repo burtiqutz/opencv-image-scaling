@@ -57,7 +57,7 @@ g++ -std=c++17 -O2 main.cpp zoom.cpp shrink.cpp \
 ## Usage
 
 ```bash
-./scale <scale_factor>
+./scale <scale_factor> <file.bmp>
 ```
 
 - `scale_factor > 1.0` — zoom (upscale)

@@ -32,15 +32,15 @@ std::pair<cv::Mat, cv::Mat> cropToSmaller(const cv::Mat& a, const cv::Mat& b) {
 }
 
 int main(int argc, char* argv[]) {
-    if (argc < 2) {
-        std::cout << "Usage: " << argv[0] << " <scale_factor>\n";
+    if (argc < 3) {
+        std::cout << "Usage: " << argv[0] << " <scale_factor> <file.bmp>\n";
         std::cout << "  scale_factor > 1 for zoom, < 1 for shrink\n";
         return -1;
     }
 
     double S = std::stod(argv[1]);
 
-    cv::Mat src = cv::imread("test.bmp", cv::IMREAD_GRAYSCALE);
+    cv::Mat src = cv::imread(argv[2], cv::IMREAD_GRAYSCALE);
     if (src.empty()) {
         std::cout << "Could not open or find the image 'test.bmp'\n";
         return -1;
